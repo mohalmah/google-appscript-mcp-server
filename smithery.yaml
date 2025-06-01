@@ -1,0 +1,29 @@
+# Smithery configuration file: https://smithery.ai/docs/build/project-config
+
+startCommand:
+  type: stdio
+  commandFunction:
+    # A JS function that produces the CLI command based on the given config to start the MCP on stdio.
+    |-
+    (config) => ({ command: 'node', args: ['mcpServer.js'], env: { GOOGLE_APP_SCRIPT_API_CLIENT_ID: config.googleAppScriptApiClientId, GOOGLE_APP_SCRIPT_API_CLIENT_SECRET: config.googleAppScriptApiClientSecret, LOG_LEVEL: config.logLevel || 'info' } })
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    required:
+      - googleAppScriptApiClientId
+      - googleAppScriptApiClientSecret
+    properties:
+      googleAppScriptApiClientId:
+        type: string
+        description: OAuth Client ID for Google Apps Script API
+      googleAppScriptApiClientSecret:
+        type: string
+        description: OAuth Client Secret for Google Apps Script API
+      logLevel:
+        type: string
+        default: info
+        description: Logging level for server (debug, info, warn, error)
+  exampleConfig:
+    googleAppScriptApiClientId: 1234567890-abcdefghijklmnop.apps.googleusercontent.com
+    googleAppScriptApiClientSecret: GOCSPX-abcdefghijklmnopqrstuvwxyz
+    logLevel: info
