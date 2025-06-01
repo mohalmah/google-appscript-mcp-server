@@ -1,4 +1,5 @@
 # Google Apps Script MCP Server
+[![smithery badge](https://smithery.ai/badge/@mohalmah/google-appscript-mcp-server)](https://smithery.ai/server/@mohalmah/google-appscript-mcp-server)
 
 **Author**: [mohalmah](https://github.com/mohalmah)  
 **License**: MIT License  
