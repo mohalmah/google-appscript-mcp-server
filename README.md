@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/mohalmah-google-appscript-mcp-server-badge.png)](https://mseep.ai/app/mohalmah-google-appscript-mcp-server)
+
 # Google Apps Script MCP Server
 
 **Author**: [mohalmah](https://github.com/mohalmah)  
